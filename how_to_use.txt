@@ -1,0 +1,78 @@
+==How to use Astra==[simple guide]
+
+for issues, visit our Telegram group- telegram.me/Techmedies_Hub
+
+first you need to store accounts for scraping and adding purposes in manager.py
+So launch in terminal
+
+> python manager.py
+
+--To add new accounts, choose 1
+Then enter number of accounts you wanna add
+Then enter your phone numbers
+After that, you have to login from the newly added accounts
+Enter login code and 2FA password[if u have set] and proceed
+
+--To filter out all the banned accounts, choose option2
+
+--To delete specific accounts, choose option3
+Choose any account to delete and proceed
+
+Now we need to add members to a group
+
+So launch in terminal
+
+> python add.py
+
+Enter group link you wanna scrape users from
+It can be a private link or a public link
+
+General format of public grp link
+
+https://t.me/username
+
+General format of private group link
+
+https://t.me/joinchat/hash
+
+***** Note *****
+
+If you have scraped from a group before, Astra remembers it and it'll ask you whether to scrape 
+from the same group or not. Enter y for yes and n for no and proceed
+****************
+
+Then enter number of accounts you wanna use
+
+=Each account will attempt to add 60 members=
+
+Then choose whether to add to public group or to a private group
+
+Then enter group link and proceed
+
+Then you need to enter delay time per request
+
+What is it?
+
+It is the amount of time Astra will wait before adding the next user
+
+Output is
+*********
+Adds a guy to a group
+--------
+Waits for some seconds
+--------
+Adds another guy to the same group
+
+
+==If you want rapid adding, then you can set the delay time to 0 It means Astra won't wait while adding users
+But chances of getting peer flood error from Telegram is more==
+
+
+Recommended delays are
+
+5 secs, 10secs, 15secs, 20secs or 60 secs if u want, but it is damn slow XD
+
+Then, sit back and watch Astra adding members
+
+
+
