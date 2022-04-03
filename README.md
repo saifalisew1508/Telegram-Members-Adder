@@ -8,12 +8,12 @@
 * Then you need to store your accounts using `manager.py`
 * Then, scrape and add members using `add.py`
 
-<b> For full tutorial, refer to <a href='https://github.com/Cryptonian007/Astra/blob/main/how_to_use.txt'>how_to_use.txt</a> </b>
+<b> For full tutorial, refer to <a href='https://github.com/saifalisew1508/Telegram-Members-Adder/blob/main/how_to_use.txt'>how_to_use.txt</a> </b>
 
 # Features ♨️
 
 * No need of API Id and API hash- It requires only phone numbers
-* Adds 60 members on an average
+* Adds 60 members on an average `Use Indian Numbers`
 * Adds members by ID, even if they don't have usernames.
 * Multi-session adding 
 * Adds members in high speed[Stable]
