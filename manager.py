@@ -144,8 +144,8 @@ while True:
         # thanks to github.com/th3unkn0n for the snippet below
         print(f'\n{lg}[i] Checking for updates...')
         try:
-            # https://raw.githubusercontent.com/Cryptonian007/Astra/main/version.txt
-            version = requests.get('https://raw.githubusercontent.com/Cryptonian007/Astra/main/version.txt')
+            # https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/version.txt
+            version = requests.get('https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/version.txt')
         except:
             print(f'{r} You are not connected to the internet')
             print(f'{r} Please connect to the internet and retry')
@@ -161,8 +161,8 @@ while True:
                     os.system('rm add.py')
                     os.system('rm manager.py')
                 #os.system('del scraper.py')
-                os.system('curl -l -O https://raw.githubusercontent.com/Cryptonian007/Astra/main/add.py')
-                os.system('curl -l -O https://raw.githubusercontent.com/Cryptonian007/Astra/main/manager.py')
+                os.system('curl -l -O https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/add.py')
+                os.system('curl -l -O https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/manager.py')
                 print(f'{lg}[*] Updated to version: {version.text}')
                 input('Press enter to exit...')
                 exit()
@@ -170,7 +170,7 @@ while True:
                 print(f'{lg}[!] Update aborted.')
                 input('Press enter to goto main menu...')
         else:
-            print(f'{lg}[i] Your Astra is already up to date')
+            print(f'{lg}[i] Your Telegram-Members-Adder is already up to date')
             input('Press enter to goto main menu...')
     elif a == 5:
         accs = []
