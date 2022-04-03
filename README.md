@@ -1,4 +1,4 @@
-# Astra 1.2
+# Telegram-Members-Adder `latest`
 <p align='center'><b>Cross Platform Telegram Members Scraping and Adding Toolkit</b></p>
 <b>THIS PROJECT IS NO LONGER UNDER MAINTENANCE</b>
 
