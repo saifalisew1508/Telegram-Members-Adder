@@ -21,7 +21,7 @@
 * Scrapes members from private/public groups
 * Cross platform- Works in Android[Termux], Linux, Windows, etc
 
-# For Installation Of Script
+# For Termux Installation
 
 First Open Termux App
 
