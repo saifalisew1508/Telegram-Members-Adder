@@ -22,4 +22,4 @@
 * Cross platform- Works in Android[Termux], Linux, Windows, etc
 
 # Screenshot 📷
-<p align='center'><img src='https://te.legra.ph/file/f0c555b284160fafc6dca.jpg' width='720' height='1600'></p>
+<p align='center'><img src='https://te.legra.ph/file/f0c555b284160fafc6dca.jpg' width='720' height='1400'></p>
