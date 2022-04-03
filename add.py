@@ -1,7 +1,7 @@
 '''
 =============SON OF GENISYS=====================
-Astra members adding script
-Coded by a dumbass kid- github.com/Cryptonian007
+Telegram members adding script
+Coded by a kid- github.com/saifalisew1508
 Apologies if anything in the code is dumb :)
 Copy with credits
 ************************************************
@@ -55,7 +55,7 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{rs}')
     #print('=============SON OF GENISYS==============')
-    print(f'{lg}   Version: {w}1.2{lg} | Author: {w}Cryptonian{rs}\n')
+    print(f'{lg}   Version: {w}2.0{lg} | Author: {w}saifalisew1508{rs}\n')
 
 
 # function to clear screen
