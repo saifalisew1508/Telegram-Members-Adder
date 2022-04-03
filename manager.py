@@ -34,7 +34,7 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF GENISYS==============')
-    print(f'   Version: 1.2 | Author: Cryptonian{n}\n')
+    print(f'   Version: latest | Author: @saifalisew1508{n}\n')
 
 def clr():
     if os.name == 'nt':
