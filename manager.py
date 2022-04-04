@@ -1,6 +1,6 @@
 from telethon.sync import TelegramClient
 from telethon.errors.rpcerrorlist import PhoneNumberBannedError
-import pickle, os
+import pickle, os, sys
 from colorama import init, Fore
 from time import sleep
 
@@ -21,20 +21,16 @@ except ImportError:
     os.system('pip install requests')
 
 def banner():
-    import random
-    # fancy logo
-    b = [
-    '   _____             __',
-    '  /  _  \    _______/  |_____________',
-    ' /  /_\  \  /  ___/\   __\_  __ \__  \\',
-    '/    |    \ \___ \  |  |  |  | \// __ \_',
-    '\____|__  /____  >  |__|  |__|  (____   /',
-    '        \/     \/                     \/'
-    ]
+	os.system('clear')
+	print(f"""
+	{re}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
+	{re}╚═╗{cy}├┤  │ │ │├─┘
+	{re}╚═╝{cy}└─┘ ┴ └─┘┴
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
-    #print('=============SON OF GENISYS==============')
-    print(f'   Version: 2.0 latest | Author: @saifalisew1508{n}\n')
+    #print('=============SON OF SAIF==============')
+    print(f' Version: 2.0:latest | Author: @saifalisew1508{n}\n')
+    print(f' Telegram: @saifalisew1508 | Instagram: saifalisew1508\n')
 
 def clr():
     if os.name == 'nt':
