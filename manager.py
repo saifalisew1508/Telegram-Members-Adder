@@ -27,7 +27,7 @@ def banner():
 	{r}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
 	{r}╚═╗{cy}├┤  │ │ │├─┘
 	{r}╚═╝{cy}└─┘ ┴ └─┘┴'
-    )
+        )
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF SAIF==============')
