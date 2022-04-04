@@ -60,7 +60,7 @@ Aur then Adding Members By using
 
 
 # Screenshot 📷
-<p align='center'><img src='https://te.legra.ph/file/f0c555b284160fafc6dca.jpg' width='175' height='300'></p>
+<p align='center'><img src='https://te.legra.ph/file/f0c555b284160fafc6dca.jpg' width='155' height='300'></p>
 
 # ❤️ Support
 <a href="https://t.me/saifalisew1508"><img src="https://img.shields.io/badge/Contact%20Owner-red.svg?logo=Telegram"></a>
