@@ -19,43 +19,21 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import UserStatusRecently
 import time
 import random
-from colorama import init, Fore
 import os
 import pickle
 
 
-init()
 
+re="\033[1;31m"
+gr="\033[1;32m"
+cy="\033[1;36m"
 
-r = Fore.RED
-lg = Fore.GREEN
-rs = Fore.RESET
-w = Fore.WHITE
-grey = '\033[97m'
-cy = Fore.CYAN
-ye = Fore.YELLOW
-colors = [r, lg, w, ye, cy]
-info = lg + '[' + w + 'i' + lg + ']' + rs
-error = lg + '[' + r + '!' + lg + ']' + rs
-success = w + '[' + lg + '*' + w + ']' + rs
-INPUT = lg + '[' + cy + '~' + lg + ']' + rs
-plus = w + '[' + lg + '+' + w + ']' + rs
-minus = w + '[' + lg + '-' + w + ']' + rs
+print (re+"╔╦╗┌─┐┬  ┌─┐╔═╗  ╔═╗┌┬┐┌┬┐┌─┐┬─┐")
+print (gr+" ║ ├┤ │  ├┤ ║ ╦  ╠═╣ ││ ││├┤ ├┬┘")
+print (re+" ╩ └─┘┴─┘└─┘╚═╝  ╩ ╩─┴┘─┴┘└─┘┴└─")
 
-def banner():
-    # fancy logo
-    b = [
-    '   _____             __',
-    '  /  _  \    _______/  |_____________',
-    ' /  /_\  \  /  ___/\   __\_  __ \__  \\',
-    '/    |    \ \___ \  |  |  |  | \// __ \_',
-    '\____|__  /____  >  |__|  |__|  (____   /',
-    '        \/     \/                     \/'
-    ]
-    for char in b:
-        print(f'{random.choice(colors)}{char}{rs}')
-    #print('=============SON OF GENISYS==============')
-    print(f'{lg}   Version: {w}2.0{lg} | Author: {w}saifalisew1508{rs}\n')
+#print (cy+"=============SON OF SAIF==============")
+print (cy+"Version: 2.0:latest | Author: saifalisew1508")
 
 
 # function to clear screen
