@@ -24,16 +24,35 @@ import pickle
 
 
 
-re="\033[1;31m"
-gr="\033[1;32m"
-cy="\033[1;36m"
+init()
 
-print (re+"╔╦╗┌─┐┬  ┌─┐╔═╗  ╔═╗┌┬┐┌┬┐┌─┐┬─┐")
-print (gr+" ║ ├┤ │  ├┤ ║ ╦  ╠═╣ ││ ││├┤ ├┬┘")
-print (re+" ╩ └─┘┴─┘└─┘╚═╝  ╩ ╩─┴┘─┴┘└─┘┴└─")
 
-#print (cy+"=============SON OF SAIF==============")
-print (cy+"Version: 2.0:latest | Author: saifalisew1508")
+r = Fore.RED
+lg = Fore.GREEN
+rs = Fore.RESET
+w = Fore.WHITE
+grey = '\033[97m'
+cy = Fore.CYAN
+ye = Fore.YELLOW
+colors = [r, lg, w, ye, cy]
+info = lg + '[' + w + 'i' + lg + ']' + rs
+error = lg + '[' + r + '!' + lg + ']' + rs
+success = w + '[' + lg + '*' + w + ']' + rs
+INPUT = lg + '[' + cy + '~' + lg + ']' + rs
+plus = w + '[' + lg + '+' + w + ']' + rs
+minus = w + '[' + lg + '-' + w + ']' + rs
+
+def banner():
+    # fancy logo
+    b = [
+        '╔╦╗┌─┐┬  ┌─┐╔═╗  ╔═╗┌┬┐┌┬┐┌─┐┬─┐',
+        ' ║ ├┤ │  ├┤ ║ ╦  ╠═╣ ││ ││├┤ ├┬┘',
+        ' ╩ └─┘┴─┘└─┘╚═╝  ╩ ╩─┴┘─┴┘└─┘┴└─'
+        ]
+        for char in b:
+            print(f'{random.choice(colors)}{char}{rs}')
+        #print('=============SON OF SAIF==============')
+        print(f'{lg}Version: {w}2.0:latest{lg} | Author: {w}saifalisew1508{rs}')
 
 
 # function to clear screen
