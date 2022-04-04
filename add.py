@@ -45,14 +45,14 @@ minus = w + '[' + lg + '-' + w + ']' + rs
 def banner():
     # fancy logo
     b = [
-        '╔╦╗┌─┐┬  ┌─┐╔═╗  ╔═╗┌┬┐┌┬┐┌─┐┬─┐',
-        ' ║ ├┤ │  ├┤ ║ ╦  ╠═╣ ││ ││├┤ ├┬┘',
-        ' ╩ └─┘┴─┘└─┘╚═╝  ╩ ╩─┴┘─┴┘└─┘┴└─'
-        ]
-        for char in b:
-            print(f'{random.choice(colors)}{char}{rs}')
-        #print('=============SON OF SAIF==============')
-        print(f'{lg}Version: {w}2.0:latest{lg} | Author: {w}saifalisew1508{rs}')
+    '╔╦╗┌─┐┬  ┌─┐╔═╗  ╔═╗┌┬┐┌┬┐┌─┐┬─┐',
+    ' ║ ├┤ │  ├┤ ║ ╦  ╠═╣ ││ ││├┤ ├┬┘',
+    ' ╩ └─┘┴─┘└─┘╚═╝  ╩ ╩─┴┘─┴┘└─┘┴└─'
+    ]
+    for char in b:
+        print(f'{random.choice(colors)}{char}{rs}')
+    #print('=============SON OF SAIF==============')
+    print(f'{lg}Version: {w}2.0:latest{lg} | Author: {w}saifalisew1508{rs}')
 
 
 # function to clear screen
