@@ -1,5 +1,5 @@
 '''
-=============SON OF GENISYS=====================
+================SAIFALISEW1508=====================
 Telegram members adding script
 Coded by a kid- github.com/saifalisew1508
 Apologies if anything in the code is dumb :)
@@ -52,7 +52,7 @@ def banner():
     ]
     for char in b:
         print(f'{random.choice(colors)}{char}{rs}')
-    #print('=============SON OF SAIF==============')
+    #print('=============SAIFALISEW1508==============')
     print(f'{lg}Version: {w}2.0:latest{lg} | Author: {w}saifalisew1508{rs}')
 
 
