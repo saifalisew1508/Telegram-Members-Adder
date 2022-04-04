@@ -13,6 +13,12 @@ w = Fore.WHITE
 cy = Fore.CYAN
 ye = Fore.YELLOW
 colors = [lg, r, w, cy, ye]
+info = lg + '[' + w + 'i' + lg + ']' + rs
+error = lg + '[' + r + '!' + lg + ']' + rs
+success = w + '[' + lg + '*' + w + ']' + rs
+INPUT = lg + '[' + cy + '~' + lg + ']' + rs
+plus = w + '[' + lg + '+' + w + ']' + rs
+minus = w + '[' + lg + '-' + w + ']' + rs
 
 try:
     import requests
@@ -22,12 +28,12 @@ except ImportError:
 
 def banner():
     import random
-	os.system('clear')
-	print(f'
-	{r}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
-	{r}╚═╗{cy}├┤  │ │ │├─┘
-	{r}╚═╝{cy}└─┘ ┴ └─┘┴'
-        )
+    # fancy logo
+    b = [
+    '╔═╗┌─┐┌┬┐┬ ┬┌─┐'
+    '╚═╗├┤  │ │ │├─┘'
+    '╚═╝└─┘ ┴ └─┘┴'
+    ]
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF SAIF==============')
