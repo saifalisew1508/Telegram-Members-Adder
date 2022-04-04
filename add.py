@@ -19,6 +19,7 @@ from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import UserStatusRecently
 import time
 import random
+from colorama import init, Fore
 import os
 import pickle
 
