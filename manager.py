@@ -13,12 +13,6 @@ w = Fore.WHITE
 cy = Fore.CYAN
 ye = Fore.YELLOW
 colors = [lg, r, w, cy, ye]
-info = lg + '[' + w + 'i' + lg + ']' + rs
-error = lg + '[' + r + '!' + lg + ']' + rs
-success = w + '[' + lg + '*' + w + ']' + rs
-INPUT = lg + '[' + cy + '~' + lg + ']' + rs
-plus = w + '[' + lg + '+' + w + ']' + rs
-minus = w + '[' + lg + '-' + w + ']' + rs
 
 try:
     import requests
