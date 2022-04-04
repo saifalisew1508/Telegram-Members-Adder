@@ -21,11 +21,13 @@ except ImportError:
     os.system('pip install requests')
 
 def banner():
+    import random
 	os.system('clear')
-	print(f"""
+	print(f'
 	{r}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
 	{r}╚═╗{cy}├┤  │ │ │├─┘
-	{r}╚═╝{cy}└─┘ ┴ └─┘┴
+	{r}╚═╝{cy}└─┘ ┴ └─┘┴'
+    )
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF SAIF==============')
