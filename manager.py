@@ -23,9 +23,9 @@ except ImportError:
 def banner():
 	os.system('clear')
 	print(f"""
-	{re}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
-	{re}╚═╗{cy}├┤  │ │ │├─┘
-	{re}╚═╝{cy}└─┘ ┴ └─┘┴
+	{r}╔═╗{cy}┌─┐┌┬┐┬ ┬┌─┐
+	{r}╚═╗{cy}├┤  │ │ │├─┘
+	{r}╚═╝{cy}└─┘ ┴ └─┘┴
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF SAIF==============')
