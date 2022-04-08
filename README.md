@@ -25,7 +25,9 @@
 
 First Open Termux App
 
-1) ```apt update && apt upgrade```
+1) ```
+apt update && apt upgrade
+```
 
 2) ```pkg install -y git python```
 
