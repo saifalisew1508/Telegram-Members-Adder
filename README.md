@@ -25,40 +25,64 @@
 
 First Open Termux App
 
-1) ```
+```
 apt update && apt upgrade
 ```
 
-2) ```pkg install -y git python```
+```
+pkg install -y git python
+```
 
-3) ```pkg update && pkg upgrade```
+```
+pkg update && pkg upgrade
+```
 
-4) ```pkg install python git```
+```
+pkg install python git
+```
 
-5) ```git clone https://github.com/saifalisew1508/Telegram-Members-Adder.git```
+```
+git clone https://github.com/saifalisew1508/Telegram-Members-Adder.git
+```
 
-6) ```cd Telegram-Members-Adder```
+```
+cd Telegram-Members-Adder
+```
 
-7) ```ls```
+```
+ls
+```
 
-8) ```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
-9) ```python3 -m pip install --upgrade pip```
+```
+python3 -m pip install --upgrade pip
+```
 
-10 ```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
-11) ```ls```
+```
+ls
+```
 
 Installation done
 
 Now run script and login your phone numbers by
 
-12) ```python manager.py```
+```
+python manager.py
+```
 
 
 Aur then Adding Members By using 
 
-14) ```python add.py```
+```
+python add.py
+```
 
 
 # Screenshot 📷
