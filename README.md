@@ -30,11 +30,7 @@ apt update && apt upgrade && pkg install -y git python && pkg update && pkg upgr
 ```
 
 ```
-cd Telegram-Members-Adder
-```
-
-```
-ls
+cd Telegram-Members-Adder && ls
 ```
 
 ```
