@@ -73,3 +73,7 @@ python add.py
 <a href="https://t.me/saifalisew1508"><img src="https://img.shields.io/badge/Contact%20Owner-pink.svg?logo=Telegram"></a>
 <a href="https://t.me/ABOUT_SAIF"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-blue.svg?logo=telegram"></a>
 
+<summary><b>Cute visitor count</b></summary>
+<br>
+<a href="https://t.me/saifalisew1508"><img alt="Cute Count" src="https://count.getloli.com/get/@Telegram-Members-Adder?theme=rule34" /></a>
+</details>
