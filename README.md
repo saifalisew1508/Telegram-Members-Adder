@@ -1,7 +1,9 @@
 ## Telegram-Members-Adder `latest`
 <p align='center'><b>Cross Platform Telegram Members Scraping and Adding Toolkit</b></p>
 <b>PLEASE USE LESS THEN 2K TARGET GROUPS</b>
-<b>Open Pull Requests for improvement in cod and become a contributor</b>
+
+## For Developers
+#### Open Pull Requests for improvement in code and become a contributor</b>
 
 # Usage 🧰
 
