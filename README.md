@@ -2,7 +2,7 @@
 
 * Cross Platform Telegram Members Scraping and Adding Toolkit
 
-* PLEASE USE LESS THEN 2K TARGET GROUPS
+* Make Sure in your Target Group Less Than 2.5k Members 
 
 <h3 align="center">For Developers 👨‍💻</h3>
 <p align='center'><samp>Open Pull Requests for improvement in code and become a contributor</samp></p>
