@@ -82,3 +82,8 @@ python add.py
 
 <h3 align="center">Visitors Counts👀</h3>
 <a href="https://github.com/saifalisew1508/Telegram-Members-Adder"><img alt="Cute Count" src="https://count.getloli.com/get/@Telegram-Members-Adder?theme=rule34" /></a>
+
+
+#### Credits
+[CRYPTONIAN](https://github.com/Cryptonian007)
+
