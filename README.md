@@ -1,6 +1,11 @@
+<h3 align="center">⚠️ SCAM ALERT ⚠️</h3>
+
+<p align='center'><samp>Some bitches are selling this free script in paid and scamming people's for make money. You don't need to pay anyone for any script, if you want any script in free of cost, you can message me on Whatsapp, Telegram, Instagram and Gmail which mentioned on my git profile</samp></p>
+
+
 <h3 align="center">Scrapper Tool</h3>
 
-* Cross Platform Telegram Members Scraping and Adding Toolkit
+* Group To Group Telegram Members Scraping and Adding Toolkit
 
 * Make Sure in your Target Group Less Than 2.5k Members 
 
@@ -82,8 +87,3 @@ python add.py
 
 <h3 align="center">Visitors Counts👀</h3>
 <a href="https://github.com/saifalisew1508/Telegram-Members-Adder"><img alt="Cute Count" src="https://count.getloli.com/get/@Telegram-Members-Adder?theme=rule34" /></a>
-
-
-#### Credits
-[CRYPTONIAN](https://github.com/Cryptonian007)
-
