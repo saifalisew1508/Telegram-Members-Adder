@@ -141,7 +141,7 @@ while True:
         break
 
 print(f'{info}{lg} Total accounts: {w}{len(accounts)}')
-number_of_accs = int(input(f'{INPUT}{cy} Enter number of accounts to use: {r}'))
+number_of_accs = int(input(f'{INPUT}{cy} How Many Accounts You Want Use In Adding: {r}'))
 print(f'{info}{cy} Choose an option{lg}')
 print(f'{cy}[0]{lg} Add to public group')
 print(f'{cy}[1]{lg} Add to private group')
