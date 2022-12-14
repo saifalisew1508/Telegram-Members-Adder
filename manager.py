@@ -31,8 +31,8 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF SAIF==============')
-    print(f' Version: 2.0:latest | Author: @saifalisew1508{n}\n')
-    print(f' Telegram: @saifalisew1508 | Instagram: saifalisew1508\n')
+    print(f' Version: latest | Telegram Handler: @saifalisew1508{n}\n')
+    print(f' WhatsApp: +919708973259 | Instagram: saifalisew1508\n')
 
 def clr():
     if os.name == 'nt':
@@ -46,7 +46,7 @@ while True:
     print(lg+'[1] Add new accounts'+n)
     print(lg+'[2] Filter all banned accounts'+n)
     print(lg+'[3] Delete specific accounts'+n)
-    print(lg+'[4] Update your Astra'+n)
+    print(lg+'[4] Update your Script+n)
     print(lg+'[5] Display All Accounts'+n)
     print(lg+'[6] Quit'+n)
     a = int(input('\nEnter your choice: '))
