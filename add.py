@@ -53,7 +53,7 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{rs}')
     #print('=============SAIFALISEW1508==============')
-    print(f'{lg}Version: {w}2.0:latest{lg} | Author: {w}saifalisew1508{rs}')
+    print(f'{lg}Version: {w}latest{lg} | Author: {w}saifalisew1508{rs}')
 
 
 # function to clear screen
@@ -126,10 +126,10 @@ try:
                 os.system('del status.dat')
             else: 
                 os.system('rm status.dat')
-            scraped_grp = input(f'{INPUT}{cy} Public/Private group link to scrape members: {r}')
+            scraped_grp = input(f'{INPUT}{cy} Public/Private group url link to scrape members: {r}')
             index = 0
 except:
-    scraped_grp = input(f'{INPUT}{cy} Public/Private group link to scrape members: {r}')
+    scraped_grp = input(f'{INPUT}{cy} Public/Private group url link to scrape members: {r}')
     index = 0
 # load all the accounts(phonenumbers)
 accounts = []
@@ -147,11 +147,11 @@ print(f'{cy}[0]{lg} Add to public group')
 print(f'{cy}[1]{lg} Add to private group')
 choice = int(input(f'{INPUT}{cy} Enter choice: {r}'))
 if choice == 0:
-    target = str(input(f'{INPUT}{cy} Enter public group link: {r}'))
+    target = str(input(f'{INPUT}{cy} Enter public group url link: {r}'))
 else:
-    target = str(input(f'{INPUT}{cy} Enter private group link: {r}'))
+    target = str(input(f'{INPUT}{cy} Enter private group url link: {r}'))
 print(f'{grey}_'*50)
-#status_choice = str(input(f'{INPUT}{cy} Do you wanna add active members?[y/n]: {r}'))
+status_choice = str(input(f'{INPUT}{cy} Do you wanna add active members?[y/n]: {r}'))
 to_use = [x for x in accounts[:number_of_accs]]
 for l in to_use: accounts.remove(l)
 with open('vars.txt', 'wb') as f:
