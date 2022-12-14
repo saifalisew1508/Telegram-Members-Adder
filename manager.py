@@ -53,9 +53,9 @@ while True:
     if a == 1:
         new_accs = []
         with open('vars.txt', 'ab') as g:
-            number_to_add = int(input(f'\n{lg} [~] Enter number of accounts to add: {r}'))
+            number_to_add = int(input(f'\n{lg} [~] Enter How Many Accounts You Want To Add: {r}'))
             for i in range(number_to_add):
-                phone_number = str(input(f'\n{lg} [~] Enter Phone Number: {r}'))
+                phone_number = str(input(f'\n{lg} [~] Enter Phone Number With Country Code: {r}'))
                 parsed_number = ''.join(phone_number.split())
                 pickle.dump([parsed_number], g)
                 new_accs.append(parsed_number)
