@@ -160,9 +160,9 @@ with open('vars.txt', 'wb') as f:
     for ab in to_use:
         pickle.dump(ab, f)
     f.close()
-sleep_time = int(input(f'{INPUT}{cy} Enter delay time per request{w}[{lg}0 for None{w}]: {r}'))
-#print(f'{info}{lg} Joining group from {w}{number_of_accs} accounts...')
-#print(f'{grey}-'*50)
+sleep_time = int(input(f'{INPUT}{cy} Enter delay time per request{w}[{lg}0 for None, i suggest enter 30 to add members properly{w}]: {r}'))
+print(f'{info}{lg} Joining group from {w}{number_of_accs} accounts...')
+print(f'{grey}-'*50)
 print(f'{success}{lg} -- Adding members from {w}{len(to_use)}{lg} account(s) --')
 adding_status = 0
 approx_members_count = 0
