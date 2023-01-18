@@ -7,6 +7,7 @@ Copy with credits
 ************************************************
 '''
 
+
 # import libraries
 from telethon.sync import TelegramClient
 from telethon.tl.types import InputPeerChannel
@@ -36,12 +37,12 @@ grey = '\033[97m'
 cy = Fore.CYAN
 ye = Fore.YELLOW
 colors = [r, lg, w, ye, cy]
-info = lg + '[' + w + 'i' + lg + ']' + rs
-error = lg + '[' + r + '!' + lg + ']' + rs
-success = w + '[' + lg + '*' + w + ']' + rs
-INPUT = lg + '[' + cy + '~' + lg + ']' + rs
-plus = w + '[' + lg + '+' + w + ']' + rs
-minus = w + '[' + lg + '-' + w + ']' + rs
+info = f'{lg}[{w}i{lg}]{rs}'
+error = f'{lg}[{r}!{lg}]{rs}'
+success = f'{w}[{lg}*{w}]{rs}'
+INPUT = f'{lg}[{cy}~{lg}]{rs}'
+plus = f'{w}[{lg}+{w}]{rs}'
+minus = f'{w}[{lg}-{w}]{rs}'
 
 def banner():
     # fancy logo
@@ -94,7 +95,7 @@ for a in accounts:
     clnt.disconnect()
 
 
-print(info+' Sessions created!')
+print(f'{info} Sessions created!')
 clr()
 banner()
 # func to log scraping details(link of the grp to scrape
@@ -152,7 +153,7 @@ else:
     target = str(input(f'{INPUT}{cy} Enter private group url link: {r}'))
 print(f'{grey}_'*50)
 status_choice = str(input(f'{INPUT}{cy} Do you wanna add active members?[y/n]: {r}'))
-to_use = [x for x in accounts[:number_of_accs]]
+to_use = list(accounts[:number_of_accs])
 for l in to_use: accounts.remove(l)
 with open('vars.txt', 'wb') as f:
     for a in accounts:

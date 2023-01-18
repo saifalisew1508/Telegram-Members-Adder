@@ -43,18 +43,18 @@ def clr():
 while True:
     clr()
     banner()
-    print(lg+'[1] Add new accounts'+n)
-    print(lg+'[2] Filter all banned accounts'+n)
-    print(lg+'[3] Delete specific accounts'+n)
-    print(lg+'[4] Update your Script'+n)
-    print(lg+'[5] Display All Accounts'+n)
-    print(lg+'[6] Quit'+n)
+    print(f'{lg}[1] Add new accounts{n}')
+    print(f'{lg}[2] Filter all banned accounts{n}')
+    print(f'{lg}[3] Delete specific accounts{n}')
+    print(f'{lg}[4] Update your Script{n}')
+    print(f'{lg}[5] Display All Accounts{n}')
+    print(f'{lg}[6] Quit{n}')
     a = int(input('\nEnter your choice: '))
     if a == 1:
         new_accs = []
         with open('vars.txt', 'ab') as g:
             number_to_add = int(input(f'\n{lg} [~] Enter How Many Accounts You Want To Add: {r}'))
-            for i in range(number_to_add):
+            for _ in range(number_to_add):
                 phone_number = str(input(f'\n{lg} [~] Enter Phone Number With Country Code: {r}'))
                 parsed_number = ''.join(phone_number.split())
                 pickle.dump([parsed_number], g)
@@ -73,15 +73,14 @@ while True:
     elif a == 2:
         accounts = []
         banned_accs = []
-        h = open('vars.txt', 'rb')
-        while True:
-            try:
-                accounts.append(pickle.load(h))
-            except EOFError:
-                break
-        h.close()
-        if len(accounts) == 0:
-            print(r+'[!] There are no accounts! Please add some and retry')
+        with open('vars.txt', 'rb') as h:
+            while True:
+                try:
+                    accounts.append(pickle.load(h))
+                except EOFError:
+                    break
+        if not accounts:
+            print(f'{r}[!] There are no accounts! Please add some and retry')
             sleep(3)
         else:
             for account in accounts:
@@ -94,11 +93,10 @@ while True:
                         #client.sign_in(phone, input('[+] Enter the code: '))
                         print(f'{lg}[+] {phone} is not banned{n}')
                     except PhoneNumberBannedError:
-                        print(r+str(phone) + ' is banned!'+n)
+                        print(r + phone + ' is banned!' + n)
                         banned_accs.append(account)
-            if len(banned_accs) == 0:
-                print(lg+'Congrats! No banned accounts')
-                input('\nPress enter to goto main menu...')
+            if not banned_accs:
+                print(f'{lg}Congrats! No banned accounts')
             else:
                 for m in banned_accs:
                     accounts.remove(m)
@@ -107,37 +105,32 @@ while True:
                         Phone = a[0]
                         pickle.dump([Phone], k)
                 k.close()
-                print(lg+'[i] All banned accounts removed'+n)
-                input('\nPress enter to goto main menu...')
-
+                print(f'{lg}[i] All banned accounts removed{n}')
+            input('\nPress enter to goto main menu...')
     elif a == 3:
         accs = []
-        f = open('vars.txt', 'rb')
-        while True:
-            try:
-                accs.append(pickle.load(f))
-            except EOFError:
-                break
-        f.close()
-        i = 0
+        with open('vars.txt', 'rb') as f:
+            while True:
+                try:
+                    accs.append(pickle.load(f))
+                except EOFError:
+                    break
         print(f'{lg}[i] Choose an account to delete\n')
-        for acc in accs:
+        for i, acc in enumerate(accs):
             print(f'{lg}[{i}] {acc[0]}{n}')
-            i += 1
         index = int(input(f'\n{lg}[+] Enter a choice: {n}'))
         phone = str(accs[index][0])
-        session_file = phone + '.session'
+        session_file = f'{phone}.session'
         if os.name == 'nt':
             os.system(f'del sessions\\{session_file}')
         else:
             os.system(f'rm sessions/{session_file}')
         del accs[index]
-        f = open('vars.txt', 'wb')
-        for account in accs:
-            pickle.dump(account, f)
-        print(f'\n{lg}[+] Account Deleted{n}')
-        input(f'\nPress enter to goto main menu...')
-        f.close()
+        with open('vars.txt', 'wb') as f:
+            for account in accs:
+                pickle.dump(account, f)
+            print(f'\n{lg}[+] Account Deleted{n}')
+            input(f'\nPress enter to goto main menu...')
     elif a == 4:
         # thanks to github.com/th3unkn0n for the snippet below
         print(f'\n{lg}[i] Checking for updates...')
@@ -150,7 +143,7 @@ while True:
             exit()
         if float(version.text) > 1.1:
             prompt = str(input(f'{lg}[~] Update available[Version {version.text}]. Download?[y/n]: {r}'))
-            if prompt == 'y' or prompt == 'yes' or prompt == 'Y':
+            if prompt in {'y', 'yes', 'Y'}:
                 print(f'{lg}[i] Downloading updates...')
                 if os.name == 'nt':
                     os.system('del add.py')
@@ -172,21 +165,18 @@ while True:
             input('Press enter to goto main menu...')
     elif a == 5:
         accs = []
-        f = open('vars.txt', 'rb')
-        while True:
-            try:
-                accs.append(pickle.load(f))
-            except EOFError:
-                break
-        f.close()
+        with open('vars.txt', 'rb') as f:
+            while True:
+                try:
+                    accs.append(pickle.load(f))
+                except EOFError:
+                    break
         print(f'\n{cy}')
         print(f'\tList Of Phone Numbers Are')
-        print(f'==========================================================')
-        i = 0
+        print('==========================================================')
         for z in accs:
             print(f'\t{z[0]}')
-            i += 1
-        print(f'==========================================================')
+        print('==========================================================')
         input('\nPress enter to goto main menu')
     elif a == 6:
         clr()
