@@ -34,7 +34,7 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     #print('=============SON OF SAIF==============')
-    print(f' Version: latest | Telegram Handler: @saifalisew1508{n}\n')
+    print(f' Version: 2.0 | Telegram Handler: @saifalisew1508{n}\n')
     print(f' WhatsApp: +919708973259 | Instagram: saifalisew1508\n')
 
 def clr():
@@ -138,13 +138,13 @@ while True:
         # thanks to github.com/th3unkn0n for the snippet below
         print(f'\n{lg}[i] Checking for updates...')
         try:
-            # https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/version.txt
+           #  https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/version.txt
             version = requests.get('https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/version.txt')
         except:
             print(f'{r} You are not connected to the internet')
             print(f'{r} Please connect to the internet and retry')
             exit()
-        if float(version.text) > 1.1:
+        if float(version.text) > 2.0:
             prompt = str(input(f'{lg}[~] Update available[Version {version.text}]. Download?[y/n]: {r}'))
             if prompt in {'y', 'yes', 'Y'}:
                 print(f'{lg}[i] Downloading updates...')
