@@ -1,3 +1,12 @@
+<details><summary><h3>MASS DM TOOL😎</h3></summary>
+  
+  # <p align="center"><a href="https://github.com/saifalisew1508/TELEGRAM-MASS-DM-BOT"><img src="https://github-readme-stats.vercel.app/api/pin?username=saifalisew1508&show_icons=true&theme=dracula&hide_border=true&repo=TELEGRAM-MASS-DM-BOT"></a></p>
+
+<p align="center">
+
+</details>
+
+
 <h1 align="center">SCRAPPER TOOL</h1>
 
 - Group To Group Telegram Members Scraping and Adding Toolkit
