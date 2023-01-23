@@ -56,8 +56,8 @@ def banner():
     ]
     for char in b:
         print(f'{random.choice(colors)}{char}{rs}')
-    #print('=============SAIFALISEW1508==============')
-    print(f'{lg}Version: {w}latest{lg} | Author: {w}saifalisew1508{rs}')
+    print('===========TELEGRAM MEMBERS ADDER============')
+    print(f'{lg}Version: {w}2.0{lg} | Author: {w}saifalisew1508{rs}')
 
 
 # function to clear screen
@@ -207,7 +207,7 @@ for acc in to_use:
         print(f'{error} {r}{e}')
         continue
     print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- {cy}Retrieving entities...')
-    #c.get_dialogs()
+    c.get_dialogs()
     try:
         members = []
         members = c.get_participants(scraped_grp_entity,aggressive=False)
@@ -221,7 +221,7 @@ for acc in to_use:
         print(f'{error}{lg} No members to add!')
         continue
     print(f'{info}{lg} Start: {w}{index}')
-    #adding_status = 0
+    adding_status = 0
     peer_flood_status = 0
     for user in members[index:stop]:
         index += 1
