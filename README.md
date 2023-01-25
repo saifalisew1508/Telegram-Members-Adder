@@ -107,7 +107,7 @@ Sometimes users may not get added at all, this may be because the account is pro
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/SchoolWaliMasti)
 
 
-<h3 align="center">Visitors Counts👀</h3>
+<h2 align="center">Visitors Counts👀</h2>
 <a href="https://github.com/saifalisew1508/Telegram-Members-Adder"><img alt="Cute Count" src="https://count.getloli.com/get/@Telegram-Members-Adder?theme=rule34" /></a>
 
 ### Contribution
