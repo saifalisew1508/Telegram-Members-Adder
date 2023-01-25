@@ -106,9 +106,6 @@ Sometimes users may not get added at all, this may be because the account is pro
 
 [![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/SchoolWaliMasti)
 
-<h3 align="center">Support</h3>
-<a href="https://t.me/saifalisew1508"><img src="https://img.shields.io/badge/Contact%20Owner-pink.svg?logo=Telegram"></a>
-<a href="https://t.me/ABOUT_SAIF"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-blue.svg?logo=telegram"></a>
 
 <h3 align="center">Visitors Counts👀</h3>
 <a href="https://github.com/saifalisew1508/Telegram-Members-Adder"><img alt="Cute Count" src="https://count.getloli.com/get/@Telegram-Members-Adder?theme=rule34" /></a>
@@ -118,7 +115,7 @@ Sometimes users may not get added at all, this may be because the account is pro
 - Add new features.
 - Create a new pull request for this branch.
 
-<h1 align="center">⚠️WARNING⚠️</h1>
+<h1 align="center">⚠️ALERT⚠️</h1>
 
 > Disclaimer⚠️  Please Note that this is a research project. I am by no means responsible for any usage of this tool. Use on your own behalf. I'm also not responsible if your accounts get banned due to extensive use of this tool
 
