@@ -1,43 +1,46 @@
-<details><summary><h3>MASS DM TOOL😎</h3></summary>
+<details><summary><h3>OTHER TELEGRAM TOOLS😎</h3></summary>
   
-  # <p align="center"><a href="https://github.com/saifalisew1508/TELEGRAM-MASS-DM-BOT"><img src="https://github-readme-stats.vercel.app/api/pin?username=saifalisew1508&show_icons=true&theme=dracula&hide_border=true&repo=TELEGRAM-MASS-DM-BOT"></a></p>
+   <p align="center"><a href="https://github.com/saifalisew1508/TELEGRAM-MASS-DM-BOT"><img src="https://github-readme-stats.vercel.app/api/pin?username=saifalisew1508&show_icons=true&theme=dracula&hide_border=true&repo=TELEGRAM-MASS-DM-BOT"></a></p>
+
+<p align="center">
+
+
+   <p align="center"><a href="https://github.com/saifalisew1508/TelegramAdder"><img src="https://github-readme-stats.vercel.app/api/pin?username=saifalisew1508&show_icons=true&theme=dracula&hide_border=true&repo=TelegramAdder"></a></p>
 
 <p align="center">
 
 </details>
 
 
-<h1 align="center">SCRAPPER TOOL</h1>
+# Version 2.0
 
-- Group To Group Telegram Members Scraping and Adding Toolkit
+<b>tldr</b>: Adds accounts via only phone numbers (no need api) . If you want to add accounts only via phone and api, then scroll to the end. If you want more free projects like this, then please support me!
 
-- Make Sure in your Target Group Less Than 2.5k Members 
+# Update Features
 
-<h2 align="center">Usage 🕹</h2>
+- Fixed bug with scraping. You can now scrape from public groups of any size.
+- Fixed bug with add.py. You can now start adding by IDs again.
 
-- You need to install requirements first - `pip install -r requirements.txt`
+# Features
 
-- Then you need to store your accounts using `manager.py`
+* ADDS IN BULK
+* Scrapes and adds to public groups
+* Adds 40-50 members on an average
+* Works in Windows systems
+* You can run unlimited accounts at the same time in order to add members
+* CSV files auto-distributer based on number of accounts to use
+* Powerful scraping tool that can scrape active members from any public group
+* Least chances of account ban
+* Script auto-joins public group from all accounts for faster adding
+* Filters banned accounts and remove them, making things easy
+* It can also store unlimited accounts for adding purposes
+* Adding scripts launches automatically based on number of accounts to use
 
-- Then, scrape and add members using `add.py`
+# How to use
 
-<b> For full tutorial, refer to <a href='https://github.com/saifalisew1508/Telegram-Members-Adder/blob/main/how_to_use.txt'>how_to_use.txt</a> </b>
+<b>Suggestion: enter 15<30 delay time.</b>
 
-<h2 align="center">Features ♨️</h2>
-
-- No need of API Id and API hash- It requires only phone numbers
-- Adds 50 members on an average `Use Indian Numbers`
-- Adding members by ID, even if they don't have usernames.
-- Multi-session adding 
-- Adds members in high speed
-- Active Members Adding
-- Adds to private/public groups
-- Scrapes members from private/public groups
-- Group to Group Adding Script Works in Android[Termux], Linux, Windows, etc
-
-<h3 align="center">Termux Installation</h3>
-
-First Open Termux App
+* First Open Termux App
 
 ```
 apt update && apt upgrade && pkg install -y git python && pkg update && pkg upgrade && pkg install python git && git clone https://github.com/saifalisew1508/Telegram-Members-Adder.git
@@ -64,24 +67,44 @@ pip install -r requirements.txt
 ls
 ```
 
-Installation done
+* Installation done
 
-Now run script and login your phone numbers by
+* Now run script and login your phone numbers by
 
 ```
 python manager.py
 ```
 
 
-Aur then Adding Members By using 
+* Aur then Adding Members By using 
 
 ```
 python add.py
 ```
 
 
-<h3l2 align="center">Screenshot 📱</h2>
-<p align='center'><img src='https://te.legra.ph/file/f0c555b284160fafc6dca.jpg' width='245' height='525'></p>
+
+# Note
+
+Sometimes users may not get added at all, this may be because the account is probably limited or you entered a channel. Try with another account. 
+
+## 💰 Support Me
+
+<a href="https://ko-fi.com/saifalisew1508" class="padded"><img height="30" style="border:0px;height:30px;" align="left" alt="saifalisew1508" src="https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0" /></a>
+<a href="https://www.paypal.me/saifalisew1508" class="padded"><img height="30" style="border:0px;height:30px;" align="centre" alt="saifalisew1508" src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" /></a>
+
+# Warning
+
+* This tool is official and completely free to use. Do not buy if anyone tries to sell by copying script
+
+# News
+
+* I have also created a scraper and adder which lets you add accounts via phone number, api_id and api_hash. If you need it contact me:
+ 
+[![Telegram Contact](https://img.shields.io/badge/Telegram-Contact-brightgreen)](https://t.me/PrinceXofficial) 
+* If you have any problems regarding the script then write it in this groupchat:
+
+[![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/SchoolWaliMasti)
 
 <h3 align="center">Support</h3>
 <a href="https://t.me/saifalisew1508"><img src="https://img.shields.io/badge/Contact%20Owner-pink.svg?logo=Telegram"></a>
@@ -99,4 +122,4 @@ python add.py
 
 > Disclaimer⚠️  Please Note that this is a research project. I am by no means responsible for any usage of this tool. Use on your own behalf. I'm also not responsible if your accounts get banned due to extensive use of this tool
 
-> Scam Alert⚠️  Some scammers are selling this free script in paid and scamming people's for make money. You don't need to pay anyone for any script, if you want any script in free of cost, you can message me on Whatsapp, Telegram, Instagram and Gmail which mentioned on my git profile</samp></p>
+> Scam Alert⚠️  Some scammers are selling this free script in paid and scamming people's for make money. You don't need to pay anyone for any script, if you want any script in free of cost, you can message me on Whatsapp, Telegram, Instagram and Gmail which mentioned on my git profile. and i never message you for selling anything</samp></p>
