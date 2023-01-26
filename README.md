@@ -14,7 +14,7 @@
 
 # Version 2.0
 
-<b>tldr</b>: Adds accounts via only phone numbers (no need api) . If you want to add accounts only via phone and api, then scroll to the end. If you want more free projects like this, then please support me!
+* Adds accounts via only phone numbers (no need api) . If you want to add accounts only via phone and api, then scroll to the end. If you want more free projects like this, then please support me!
 
 # Update Features
 
