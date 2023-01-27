@@ -9,6 +9,10 @@
 
 <p align="center">
 
+   <p align="center"><a href="https://github.com/saifalisew1508/TelegramScraper"><img src="https://github-readme-stats.vercel.app/api/pin?username=saifalisew1508&show_icons=true&theme=dracula&hide_border=true&repo=TelegramScraper"></a></p>
+
+<p align="center">
+
 </details>
 
 
