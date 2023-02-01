@@ -1,4 +1,23 @@
 <details><summary><h3>OTHER TELEGRAM TOOLS😎</h3></summary>
+
+[![](https://img.shields.io/badge/TelegramMembersAdder-v1.0-darkgreen)](#)
+![Download](https://img.shields.io/github/downloads/saifalisew1508/Telegram-Members-Adder/total?style=social)
+![fork](https://img.shields.io/github/forks/saifalisew1508/Telegram-Members-Adder?style=social)
+[![Stars](https://img.shields.io/github/stars/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/stargazers)
+[![languages](https://img.shields.io/github/languages/count/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/fork)
+[![Release](https://img.shields.io/github/release-date/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder)   
+[![size](https://img.shields.io/github/languages/code-size/saifalisew1508/Telegram-Members-Adder?style=social)](https://docs.python-telegram-bot.org/)
+[![Telethon](https://img.shields.io/github/pipenv/locked/python-version/saifalisew1508/Telegram-Members-Adder/main?style=social)](https://docs.telethon.dev/)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/saifalisew1508/Telegram-Members-Adder/graphs/commit-activity)
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/saifalisew1508/Telegram-Members-Adder)
+[![Contributors](https://img.shields.io/github/contributors/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/graphs/contributors)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social)](https://makeapullrequest.com)  
+[![Sparkline](https://stars.medv.io/saifalisew1508/Telegram-Members-Adder.svg)](https://stars.medv.io/saifalisew1508/Telegram-Members-Adder)
+</p>
+</details>
+
+
+<details><summary><h3>OTHER TELEGRAM TOOLS😎</h3></summary>
   
    <p align="center"><a href="https://github.com/saifalisew1508/TELEGRAM-MASS-DM-BOT"><img src="https://github-readme-stats.vercel.app/api/pin?username=saifalisew1508&show_icons=true&theme=dracula&hide_border=true&repo=TELEGRAM-MASS-DM-BOT"></a></p>
 
