@@ -6,8 +6,8 @@
 [![Stars](https://img.shields.io/github/stars/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/stargazers)
 [![Languages](https://img.shields.io/github/languages/count/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/fork)
 [![Release](https://img.shields.io/github/release-date/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder)   
-[![Size](https://img.shields.io/github/languages/code-size/saifalisew1508/Telegram-Members-Adder?style=social)](https://docs.python-telegram-bot.org/)
-[![Python](https://img.shields.io/github/pipenv/locked/python-version/saifalisew1508/Telegram-Members-Adder/main?style=social)](https://docs.telethon.dev/)
+![Size](https://img.shields.io/github/languages/code-size/saifalisew1508/Telegram-Members-Adder?style=social)
+![Python](https://img.shields.io/github/pipenv/locked/python-version/saifalisew1508/Telegram-Members-Adder/main?style=social)
 [![Contributors](https://img.shields.io/github/contributors/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/graphs/contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=social)](https://makeapullrequest.com)  
 </p>
