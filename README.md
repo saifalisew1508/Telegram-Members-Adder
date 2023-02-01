@@ -1,4 +1,4 @@
-<details><summary><h3>OTHER TELEGRAM TOOLS😎</h3></summary>
+<details><summary><h3>ABOUT😎</h3></summary>
 
 [![](https://img.shields.io/badge/TelegramMembersAdder-v1.0-darkgreen)](#)
 ![Download](https://img.shields.io/github/downloads/saifalisew1508/Telegram-Members-Adder/total?style=social)
