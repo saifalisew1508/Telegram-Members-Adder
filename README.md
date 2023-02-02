@@ -2,9 +2,9 @@
 
 [![](https://img.shields.io/badge/TelegramMembersAdder-v1.0-darkgreen)](#)
 ![Download](https://img.shields.io/github/downloads/saifalisew1508/Telegram-Members-Adder/total?style=social)
-![Fork](https://img.shields.io/github/forks/saifalisew1508/Telegram-Members-Adder?style=social)
+[![Fork](https://img.shields.io/github/forks/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/fork)
 [![Stars](https://img.shields.io/github/stars/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/stargazers)
-[![Languages](https://img.shields.io/github/languages/count/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/fork)
+![Languages](https://img.shields.io/github/languages/count/saifalisew1508/Telegram-Members-Adder?style=social)
 [![Release](https://img.shields.io/github/release-date/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder)   
 ![Size](https://img.shields.io/github/languages/code-size/saifalisew1508/Telegram-Members-Adder?style=social)
 ![Python](https://img.shields.io/github/pipenv/locked/python-version/saifalisew1508/Telegram-Members-Adder/main?style=social)
