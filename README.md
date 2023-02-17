@@ -125,7 +125,8 @@ Sometimes users may not get added at all, this may be because the account is pro
 [![Telegram Contact](https://img.shields.io/badge/Telegram-Contact-brightgreen)](https://t.me/PrinceXofficial) 
 * If you have any problems regarding the script then write it in this groupchat:
 
-[![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/MissCutie_Support)
+[![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/PublicSource_Chat)
+[![Telegram Channel](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/ABOUT_SAIF)
 
 
 <h2 align="center">Visitors Counts👀</h2>
