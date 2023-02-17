@@ -117,7 +117,7 @@ Sometimes users may not get added at all, this may be because the account is pro
 
 * This tool is official and completely free to use. Do not buy if anyone tries to sell by copying script
 
-# News
+# Contacts
 
 * I have also created a scraper and adder which lets you add accounts via phone number, api_id and api_hash. If you need it contact me:
 
