@@ -120,11 +120,12 @@ Sometimes users may not get added at all, this may be because the account is pro
 # News
 
 * I have also created a scraper and adder which lets you add accounts via phone number, api_id and api_hash. If you need it contact me:
- 
+
+[![Telegram Contact](https://img.shields.io/badge/Telegram-Contact-brightgreen)](https://t.me/saifalisew15O8) 
 [![Telegram Contact](https://img.shields.io/badge/Telegram-Contact-brightgreen)](https://t.me/PrinceXofficial) 
 * If you have any problems regarding the script then write it in this groupchat:
 
-[![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/SchoolWaliMasti)
+[![Telegram Group](https://img.shields.io/badge/Telegram-Group-brightgreen)](https://t.me/MissCutie_Support)
 
 
 <h2 align="center">Visitors Counts👀</h2>
