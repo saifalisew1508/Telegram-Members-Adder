@@ -139,6 +139,6 @@ Sometimes users may not get added at all, this may be because the account is pro
 
 <h1 align="center">⚠️ALERT⚠️</h1>
 
-> Disclaimer⚠️  Please Note that this is a research project. I am by no means responsible for any usage of this tool. Use on your own behalf. I'm also not responsible if your accounts get banned due to extensive use of this tool
+> **Disclaimer**  Please Note that this is a research project. I am by no means responsible for any usage of this tool. Use on your own behalf. I'm also not responsible if your accounts get banned due to extensive use of this tool
 
-> Scam Alert⚠️  Some scammers are selling this free script in paid and scamming people's for make money. You don't need to pay anyone for any script, if you want any script in free of cost, you can message me on Whatsapp, Telegram, Instagram and Gmail which mentioned on my git profile. and i never message you for selling anything</samp></p>
+> **Scam Alert**  Some scammers are selling this free script in paid and scamming people's for make money. You don't need to pay anyone for any script, if you want any script in free of cost, you can message me on Whatsapp, Telegram, Instagram and Gmail which mentioned on my git profile. and i never message you for selling anything</samp></p>
