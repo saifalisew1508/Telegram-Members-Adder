@@ -32,16 +32,23 @@
 </details>
 
 
-# Version 2.0
+### Version 3.0
+> ***Version 3.0*** `This is Version 2.0 Tool based on telethon. If you want to use v3.0 based on pyrogram visit on. Mentioned repository`
+
+<p align="center"><a href="https://github.com/saifalisew1508/TelegramAdderTool"><img src="https://github-readme-stats.vercel.app/api/pin?username=saifalisew1508&show_icons=true&theme=dracula&hide_border=true&repo=TelegramAdderTool"></a></p>
+
+<p align="center">
+
+### Version 2.0
 
 * Adds accounts via only phone numbers (no need api) . If you want to add accounts only via phone and api, then scroll to the end. If you want more free projects like this, then please support me!
 
-# Update Features
+### Update Features
 
 - Fixed bug with scraping. You can now scrape from public groups of any size.
 - Fixed bug with add.py. You can now start adding by IDs again.
 
-# Features
+### Features
 
 * ADDS IN BULK
 * Scrapes and adds to public groups
@@ -56,7 +63,7 @@
 * It can also store unlimited accounts for adding purposes
 * Adding scripts launches automatically based on number of accounts to use
 
-# How to use
+### How to use
 
 <b>Suggestion: enter 15<30 delay time.</b>
 
@@ -104,7 +111,7 @@ python add.py
 
 
 
-# Note
+### Note
 
 Sometimes users may not get added at all, this may be because the account is probably limited or you entered a channel. Try with another account. 
 
@@ -113,11 +120,11 @@ Sometimes users may not get added at all, this may be because the account is pro
 <a href="https://ko-fi.com/saifalisew1508" class="padded"><img height="30" style="border:0px;height:30px;" align="left" alt="saifalisew1508" src="https://az743702.vo.msecnd.net/cdn/kofi3.png?v=0" /></a>
 <a href="https://www.paypal.me/saifalisew1508" class="padded"><img height="30" style="border:0px;height:30px;" align="centre" alt="saifalisew1508" src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" /></a>
 
-# Warning
+### Warning
 
 * This tool is official and completely free to use. Do not buy if anyone tries to sell by copying script
 
-# Contacts
+### Contacts
 
 * I have also created a scraper and adder which lets you add accounts via phone number, api_id and api_hash. If you need it contact me:
 
