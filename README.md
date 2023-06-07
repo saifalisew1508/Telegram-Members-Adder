@@ -1,5 +1,6 @@
 <details><summary><h3>ABOUT😎</h3></summary>
-
+  
+[![Sparkline](https://stars.medv.io/saifalisew1508/Telegram-Members-Adder.svg)](https://stars.medv.io/saifalisew1508/Telegram-Members-Adder)
 [![](https://img.shields.io/badge/TelegramMembersAdder-v1.0-darkgreen)](#)
 ![Download](https://img.shields.io/github/downloads/saifalisew1508/Telegram-Members-Adder/total?style=social)
 [![Fork](https://img.shields.io/github/forks/saifalisew1508/Telegram-Members-Adder?style=social)](https://github.com/saifalisew1508/Telegram-Members-Adder/fork)
