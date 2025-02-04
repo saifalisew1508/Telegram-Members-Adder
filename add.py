@@ -7,28 +7,28 @@ Copy with credits
 ************************************************
 '''
 
-
 # import libraries
 from telethon.sync import TelegramClient
 from telethon.tl.types import InputPeerChannel
-from telethon.errors.rpcerrorlist import PeerFloodError, UserPrivacyRestrictedError, PhoneNumberBannedError, ChatAdminRequiredError
-from telethon.errors.rpcerrorlist import ChatWriteForbiddenError, UserBannedInChannelError, UserAlreadyParticipantError, FloodWaitError
+from telethon.errors.rpcerrorlist import (
+    PeerFloodError, UserPrivacyRestrictedError, PhoneNumberBannedError, 
+    ChatAdminRequiredError, ChatWriteForbiddenError, UserBannedInChannelError, 
+    UserAlreadyParticipantError, FloodWaitError
+)
 from telethon.tl.functions.channels import InviteToChannelRequest
-import sys
 from telethon.tl.functions.messages import ImportChatInviteRequest, AddChatUserRequest
 from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.tl.types import UserStatusRecently
+import sys
 import time
 import random
 from colorama import init, Fore
 import os
 import pickle
 
-
-
 init()
 
-
+# Define colors for console output
 r = Fore.RED
 lg = Fore.GREEN
 rs = Fore.RESET
@@ -45,7 +45,7 @@ plus = f'{w}[{lg}+{w}]{rs}'
 minus = f'{w}[{lg}-{w}]{rs}'
 
 def banner():
-    # fancy logo
+    # Fancy logo
     b = [
     '░█████╗░██████╗░██████╗░███████╗██████╗░',
     '██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗',
@@ -60,8 +60,7 @@ def banner():
     print(f'{lg}Version: {w}2.0{lg} | GitHub: {w}@saifalisew1508{rs}')
     print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}@_Prince.Babu_{rs}')
 
-
-# function to clear screen
+# Function to clear screen
 def clr():
     if os.name == 'nt':
         os.system('cls')
@@ -69,22 +68,21 @@ def clr():
         os.system('clear')
 
 accounts = []
-f = open('vars.txt', 'rb')
-while True:
-    try:
-        accounts.append(pickle.load(f))
-    except EOFError:
-        break
+with open('vars.txt', 'rb') as f:
+    while True:
+        try:
+            accounts.append(pickle.load(f))
+        except EOFError:
+            break
 
-# create sessions(if any) and check for any banned accounts
-# TODO: Remove code input(just to check if an account is banned)
+# Create sessions and check for banned accounts
 print('\n' + info + lg + ' Checking for banned accounts...' + rs)
+banned = []
 for a in accounts:
     phn = a[0]
     print(f'{plus}{grey} Checking {lg}{phn}')
     clnt = TelegramClient(f'sessions/{phn}', 3910389, '86f861352f0ab76a251866059a6adbd6')
     clnt.connect()
-    banned = []
     if not clnt.is_user_authorized():
         try:
             clnt.send_code_request(phn)
@@ -92,24 +90,22 @@ for a in accounts:
         except PhoneNumberBannedError:
             print(f'{error} {w}{phn} {r}is banned!{rs}')
             banned.append(a)
-    for z in banned:
-        accounts.remove(z)
-        print(info+lg+' Banned account removed[Remove permanently using manager.py]'+rs)
-    time.sleep(0.5)
     clnt.disconnect()
 
+for z in banned:
+    accounts.remove(z)
+    print(info + lg + ' Banned account removed[Remove permanently using manager.py]' + rs)
+    time.sleep(0.5)
 
 print(f'{info} Sessions created!')
 clr()
 banner()
-# func to log scraping details(link of the grp to scrape
-# and current index) in order to resume later
+
+# Function to log scraping details
 def log_status(scraped, index):
     with open('status.dat', 'wb') as f:
         pickle.dump([scraped, int(index)], f)
-        f.close()
     print(f'{info}{lg} Session stored in {w}status.dat{lg}')
-    
 
 def exit_window():
     input(f'\n{cy} Press enter to exit...')
@@ -117,33 +113,28 @@ def exit_window():
     banner()
     sys.exit()
 
-# read user details
+# Read user details
 try:
-    # rquest to resume adding
     with open('status.dat', 'rb') as f:
         status = pickle.load(f)
-        f.close()
-        lol = input(f'{INPUT}{cy} Resume scraping members from {w}{status[0]}{lg}? [y/n]: {r}')
-        if 'y' in lol:
-            scraped_grp = status[0] ; index = int(status[1])
-        else:
-            if os.name == 'nt': 
-                os.system('del status.dat')
-            else: 
-                os.system('rm status.dat')
-            scraped_grp = input(f'{INPUT}{cy} Public/Private group url link to scrape members: {r}')
-            index = 0
-except:
+    resume_scraping = input(f'{INPUT}{cy} Resume scraping members from {w}{status[0]}{lg}? [y/n]: {r}')
+    if resume_scraping.lower() == 'y':
+        scraped_grp = status[0]
+        index = int(status[1])
+    else:
+        os.remove('status.dat')
+        scraped_grp = input(f'{INPUT}{cy} Public/Private group url link to scrape members: {r}')
+        index = 0
+except FileNotFoundError:
     scraped_grp = input(f'{INPUT}{cy} Public/Private group url link to scrape members: {r}')
     index = 0
-# load all the accounts(phonenumbers)
-accounts = []
-f = open('vars.txt', 'rb')
-while True:
-    try:
-        accounts.append(pickle.load(f))
-    except EOFError:
-        break
+
+with open('vars.txt', 'rb') as f:
+    while True:
+        try:
+            accounts.append(pickle.load(f))
+        except EOFError:
+            break
 
 print(f'{info}{lg} Total accounts: {w}{len(accounts)}')
 number_of_accs = int(input(f'{INPUT}{cy} How Many Accounts You Want Use In Adding: {r}'))
@@ -151,29 +142,28 @@ print(f'{info}{cy} Choose an option{lg}')
 print(f'{cy}[0]{lg} Add to public group')
 print(f'{cy}[1]{lg} Add to private group')
 choice = int(input(f'{INPUT}{cy} Enter choice: {r}'))
-if choice == 0:
-    target = str(input(f'{INPUT}{cy} Enter public group url link: {r}'))
-else:
-    target = str(input(f'{INPUT}{cy} Enter private group url link: {r}'))
+target = input(f'{INPUT}{cy} Enter group url link: {r}')
+
 print(f'{grey}_'*50)
-status_choice = str(input(f'{INPUT}{cy} Do you wanna add active members?[y/n]: {r}'))
-to_use = list(accounts[:number_of_accs])
-for l in to_use: accounts.remove(l)
+status_choice = input(f'{INPUT}{cy} Do you wanna add active members?[y/n]: {r}')
+to_use = accounts[:number_of_accs]
+
 with open('vars.txt', 'wb') as f:
     for a in accounts:
         pickle.dump(a, f)
     for ab in to_use:
         pickle.dump(ab, f)
-    f.close()
+
 sleep_time = int(input(f'{INPUT}{cy} Enter delay time per request{w}[{lg}0 for None, i suggest enter 30 to add members properly{w}]: {r}'))
 print(f'{info}{lg} Joining group from {w}{number_of_accs} accounts...')
 print(f'{grey}-'*50)
 print(f'{success}{lg} -- Adding members from {w}{len(to_use)}{lg} account(s) --')
+
 adding_status = 0
 approx_members_count = 0
 for acc in to_use:
     stop = index + 60
-    c = TelegramClient(f'sessions/{acc[0]}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
+    c = TelegramClient(f'sessions/{acc[0]}', 3910389, '86f861352f0ab76a251866059a6adbd6')
     print(f'{plus}{grey} User: {cy}{acc[0]}{lg} -- {cy}Starting session... ')
     c.start(acc[0])
     acc_name = c.get_me().first_name
@@ -184,7 +174,7 @@ for acc in to_use:
                 c(ImportChatInviteRequest(g_hash))
                 print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- Joined group to scrape')
             except UserAlreadyParticipantError:
-                pass 
+                pass
         else:
             c(JoinChannelRequest(scraped_grp))
             print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- Joined group to scrape')
@@ -207,20 +197,21 @@ for acc in to_use:
         print(f'{error}{r} User: {cy}{acc_name}{lg} -- Failed to join group')
         print(f'{error} {r}{e}')
         continue
+
     print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- {cy}Retrieving entities...')
     c.get_dialogs()
     try:
-        members = []
-        members = c.get_participants(scraped_grp_entity,aggressive=False)
+        members = c.get_participants(scraped_grp_entity, aggressive=False)
     except Exception as e:
         print(f'{error}{r} Couldn\'t scrape members')
         print(f'{error}{r} {e}')
         continue
+
     approx_members_count = len(members)
-    assert approx_members_count != 0
-    if index >= approx_members_count:
+    if approx_members_count == 0:
         print(f'{error}{lg} No members to add!')
         continue
+
     print(f'{info}{lg} Start: {w}{index}')
     adding_status = 0
     peer_flood_status = 0
@@ -237,7 +228,6 @@ for acc in to_use:
             user_id = user.first_name
             target_title = target_entity.title
             print(f'{plus}{grey} User: {cy}{acc_name}{lg} -- {cy}{user_id} {lg}--> {cy}{target_title}')
-            #print(f'{info}{grey} User: {cy}{acc_name}{lg} -- Sleep 1 second')
             adding_status += 1
             print(f'{info}{grey} User: {cy}{acc_name}{lg} -- Sleep {w}{sleep_time} {lg}second(s)')
             time.sleep(sleep_time)
@@ -276,7 +266,7 @@ for acc in to_use:
         except Exception as e:
             print(f'{error} {e}')
             continue
-#global adding_status, approx_members_count
+
 if adding_status != 0:
     print(f"\n{info}{lg} Adding session ended")
 try:
