@@ -1,4 +1,4 @@
-> ***Important Notice ‼️*** ``Its may possible this script will no longer will be worker and i havent much time to update it and make it workable. If you want to a workable script or paid scirpt message me on `` 👉🏻 **Instagram** [@\_Prince.Babu\_](https://instagram.com/saifaliopp) or 👉🏻 **Telegram** [@DearSaif](https://t.me/DearSaif) 
+> ***Important Notice ‼️*** ``Its may possible this script will no longer will be worker and i havent much time to update it and make it workable. If you want to a workable script or paid scirpt message me on `` 👉🏻 **Instagram** [@\saifaliopp\_](https://instagram.com/saifaliopp) or 👉🏻 **Telegram** [@DearSaif](https://t.me/DearSaif) 
 
 <details><summary><h3>ABOUT😎</h3></summary>
   
@@ -42,7 +42,7 @@
 
 <p align="center">
 
-### Version 2.0
+### Version 2.6.82
 
 * Adds accounts via only phone numbers (no need api) . If you want to add accounts only via phone and api, then scroll to the end. If you want more free projects like this, then please support me!
 
