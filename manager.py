@@ -35,8 +35,8 @@ def banner():
     for char in b:
         print(f'{random.choice(colors)}{char}{n}')
     print('Contact below address for get premium script')
-    print(f'{lg}Version: {w}2.6.82{lg} | GitHub: {w}@saifalisew1508{rs}')
-    print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}www.instagram.com/saifaliopp{rs}')
+    print(f'{lg}Version: {w}2.6.82{lg} | GitHub: {w}@saifalisew1508{n}')
+    print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}www.instagram.com/saifaliopp{n}')
 
 def clr():
     if os.name == 'nt':
