@@ -31,18 +31,18 @@ init()
 # Define colors for console output
 r = Fore.RED
 lg = Fore.GREEN
-rs = Fore.RESET
+n = Fore.RESET
 w = Fore.WHITE
 grey = '\033[97m'
 cy = Fore.CYAN
 ye = Fore.YELLOW
 colors = [r, lg, w, ye, cy]
-info = f'{lg}[{w}i{lg}]{rs}'
-error = f'{lg}[{r}!{lg}]{rs}'
-success = f'{w}[{lg}*{w}]{rs}'
-INPUT = f'{lg}[{cy}~{lg}]{rs}'
-plus = f'{w}[{lg}+{w}]{rs}'
-minus = f'{w}[{lg}-{w}]{rs}'
+info = f'{lg}[{w}i{lg}]{n}'
+error = f'{lg}[{r}!{lg}]{n}'
+success = f'{w}[{lg}*{w}]{n}'
+INPUT = f'{lg}[{cy}~{lg}]{n}'
+plus = f'{w}[{lg}+{w}]{n}'
+minus = f'{w}[{lg}-{w}]{n}'
 
 def banner():
     # Fancy logo
@@ -55,10 +55,10 @@ def banner():
     '╚═╝░░╚═╝╚═════╝░╚═════╝░╚══════╝╚═╝░░╚═╝'
     ]
     for char in b:
-        print(f'{random.choice(colors)}{char}{rs}')
+        print(f'{random.choice(colors)}{char}{n}')
     print('Contact below address for get premium script')
-    print(f'{lg}Version: {w}2.0{lg} | GitHub: {w}@saifalisew1508{rs}')
-    print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}@_Prince.Babu_{rs}')
+    print(f'{lg}Version: {w}2.0{lg} | GitHub: {w}@saifalisew1508{n}')
+    print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}@_Prince.Babu_{n}')
 
 # Function to clear screen
 def clr():
