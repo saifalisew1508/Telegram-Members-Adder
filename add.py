@@ -58,7 +58,7 @@ def banner():
         print(f'{random.choice(colors)}{char}{rs}')
     print('Contact below address for get premium script')
     print(f'{lg}Version: {w}2.0{lg} | GitHub: {w}@saifalisew1508{rs}')
-    print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}@_Prince.Babu_{rs}')
+    print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}@saifaliopp{rs}')
 
 # Function to clear screen
 def clr():
