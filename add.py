@@ -17,7 +17,7 @@ from telethon.errors.rpcerrorlist import (
 )
 from telethon.tl.functions.channels import InviteToChannelRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest, AddChatUserRequest
-from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest, ReportChannelRequest
+from telethon.tl.functions.channels import JoinChannelRequest, LeaveChannelRequest
 from telethon.tl.types import UserStatusRecently
 import sys
 import time
