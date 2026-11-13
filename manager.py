@@ -1,197 +1,166 @@
+"""Manage Telegram user sessions safely.
+
+Set TELEGRAM_API_ID and TELEGRAM_API_HASH in the environment before running.
+Account metadata is stored as JSON; session files remain in ./sessions.
+"""
+from __future__ import annotations
+
+import json
+import os
+import re
+from pathlib import Path
+from typing import Any
+
+from colorama import Fore, Style, init
 from telethon.sync import TelegramClient
-from telethon.errors.rpcerrorlist import PhoneNumberBannedError
-import pickle, os
-from colorama import init, Fore
-from time import sleep
 
-init()
+init(autoreset=True)
 
-# Define colors for console output
-n = Fore.RESET
-lg = Fore.LIGHTGREEN_EX
-r = Fore.RED
-w = Fore.WHITE
-cy = Fore.CYAN
-ye = Fore.YELLOW
-colors = [lg, r, w, cy, ye]
+ROOT = Path(__file__).resolve().parent
+SESSIONS = ROOT / "sessions"
+ACCOUNTS_FILE = ROOT / "accounts.json"
 
-try:
-    import requests
-except ImportError:
-    print(f'{lg}[i] Installing module - requests...{n}')
-    os.system('pip install requests')
 
-def banner():
-    import random
-    # Fancy logo
-    b = [
-    '░██████╗███████╗████████╗██╗░░░██╗██████╗░',
-    '██╔════╝██╔════╝╚══██╔══╝██║░░░██║██╔══██╗',
-    '╚█████╗░█████╗░░░░░██║░░░██║░░░██║██████╔╝',
-    '░╚═══██╗██╔══╝░░░░░██║░░░██║░░░██║██╔═══╝░',
-    '██████╔╝███████╗░░░██║░░░╚██████╔╝██║░░░░░',
-    '╚═════╝░╚══════╝░░░╚═╝░░░░╚═════╝░╚═╝░░░░░'
-    ]
-    for char in b:
-        print(f'{random.choice(colors)}{char}{n}')
-    print('Contact below address for get premium script')
-    print(f'{lg}Version: {w}2.6.82{lg} | GitHub: {w}@saifalisew1508{n}')
-    print(f'{lg}Telegram: {w}@DearSaif{lg} | Instagram: {w}www.instagram.com/saifaliopp{n}')
+def credentials() -> tuple[int, str]:
+    api_id = os.getenv("TELEGRAM_API_ID", "").strip()
+    api_hash = os.getenv("TELEGRAM_API_HASH", "").strip()
+    if not api_id.isdigit() or not api_hash:
+        raise RuntimeError(
+            "Set TELEGRAM_API_ID and TELEGRAM_API_HASH environment variables. "
+            "Get them from https://my.telegram.org."
+        )
+    return int(api_id), api_hash
 
-def clr():
-    if os.name == 'nt':
-        os.system('cls')
-    else:
-        os.system('clear')
 
-def add_new_accounts():
-    new_accs = []
-    with open('vars.txt', 'ab') as g:
-        number_to_add = int(input(f'\n{lg} [~] Enter How Many Accounts You Want To Add: {r}'))
-        for _ in range(number_to_add):
-            phone_number = str(input(f'\n{lg} [~] Enter Phone Number With Country Code: {r}'))
-            parsed_number = ''.join(phone_number.split())
-            pickle.dump([parsed_number], g)
-            new_accs.append(parsed_number)
-        print(f'\n{lg} [i] Saved all accounts in vars.txt')
-        clr()
-        print(f'\n{lg} [*] Logging in from new accounts\n')
-        for number in new_accs:
-            c = TelegramClient(f'sessions/{number}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
-            c.start(number)
-            print(f'{lg}[+] Login successful')
-            c.disconnect()
-        input(f'\n Press enter to goto main menu...')
-
-def filter_banned_accounts():
-    accounts = []
-    banned_accs = []
-    with open('vars.txt', 'rb') as h:
-        while True:
-            try:
-                accounts.append(pickle.load(h))
-            except EOFError:
-                break
-    if not accounts:
-        print(f'{r}[!] There are no accounts! Please add some and retry')
-        sleep(3)
-    else:
-        for account in accounts:
-            phone = str(account[0])
-            client = TelegramClient(f'sessions/{phone}', 3910389 , '86f861352f0ab76a251866059a6adbd6')
-            client.connect()
-            if not client.is_user_authorized():
-                try:
-                    client.send_code_request(phone)
-                    print(f'{lg}[+] {phone} is not banned{n}')
-                except PhoneNumberBannedError:
-                    print(r + phone + ' is banned!' + n)
-                    banned_accs.append(account)
-            client.disconnect()
-        if not banned_accs:
-            print(f'{lg}Congrats! No banned accounts')
-        else:
-            for m in banned_accs:
-                accounts.remove(m)
-            with open('vars.txt', 'wb') as k:
-                for a in accounts:
-                    Phone = a[0]
-                    pickle.dump([Phone], k)
-            print(f'{lg}[i] All banned accounts removed{n}')
-        input('\nPress enter to goto main menu...')
-
-def delete_specific_account():
-    accs = []
-    with open('vars.txt', 'rb') as f:
-        while True:
-            try:
-                accs.append(pickle.load(f))
-            except EOFError:
-                break
-    print(f'{lg}[i] Choose an account to delete\n')
-    for i, acc in enumerate(accs):
-        print(f'{lg}[{i}] {acc[0]}{n}')
-    index = int(input(f'\n{lg}[+] Enter a choice: {n}'))
-    phone = str(accs[index][0])
-    session_file = f'{phone}.session'
-    if os.name == 'nt':
-        os.system(f'del sessions\\{session_file}')
-    else:
-        os.system(f'rm sessions/{session_file}')
-    del accs[index]
-    with open('vars.txt', 'wb') as f:
-        for account in accs:
-            pickle.dump(account, f)
-        print(f'\n{lg}[+] Account Deleted{n}')
-        input(f'\nPress enter to goto main menu...')
-
-def update_script():
-    print(f'\n{lg}[i] Checking for updates...')
+def load_accounts() -> list[dict[str, str]]:
+    if not ACCOUNTS_FILE.exists():
+        return []
     try:
-        version = requests.get('https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/version.txt')
-    except:
-        print(f'{r} You are not connected to the internet')
-        print(f'{r} Please connect to the internet and retry')
-        exit()
-    if float(version.text) > 2.0:
-        prompt = str(input(f'{lg}[~] Update available[Version {version.text}]. Download?[y/n]: {r}'))
-        if prompt in {'y', 'yes', 'Y'}:
-            print(f'{lg}[i] Downloading updates...')
-            if os.name == 'nt':
-                os.system('del add.py')
-                os.system('del manager.py')
+        data: Any = json.loads(ACCOUNTS_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Cannot read {ACCOUNTS_FILE.name}: {exc}") from exc
+    if not isinstance(data, list):
+        raise RuntimeError("accounts.json must contain a JSON array.")
+    accounts = []
+    for item in data:
+        if isinstance(item, dict) and isinstance(item.get("phone"), str):
+            phone = item["phone"].strip()
+            if phone:
+                accounts.append({"phone": phone})
+    return accounts
+
+
+def save_accounts(accounts: list[dict[str, str]]) -> None:
+    ACCOUNTS_FILE.parent.mkdir(parents=True, exist_ok=True)
+    temp = ACCOUNTS_FILE.with_suffix(".json.tmp")
+    temp.write_text(json.dumps(accounts, indent=2) + "\n", encoding="utf-8")
+    temp.replace(ACCOUNTS_FILE)
+
+
+def session_path(phone: str) -> Path:
+    safe = re.sub(r"[^0-9+]", "", phone)
+    if not safe:
+        raise ValueError("Invalid phone number.")
+    return SESSIONS / safe
+
+
+def login_account(phone: str) -> None:
+    api_id, api_hash = credentials()
+    SESSIONS.mkdir(parents=True, exist_ok=True)
+    client = TelegramClient(str(session_path(phone)), api_id, api_hash)
+    try:
+        client.start(phone=phone)
+        me = client.get_me()
+        label = " ".join(part for part in [me.first_name, me.last_name] if part)
+        print(Fore.GREEN + f"Login successful: {label or me.username or phone}")
+    finally:
+        client.disconnect()
+
+
+def add_account() -> None:
+    phone = input("Phone number with country code (e.g. +919876543210): ").strip()
+    if not re.fullmatch(r"\+[1-9]\d{7,14}", phone):
+        print(Fore.RED + "Enter a valid international phone number.")
+        return
+    accounts = load_accounts()
+    if any(item["phone"] == phone for item in accounts):
+        print(Fore.YELLOW + "This account is already registered.")
+        return
+    login_account(phone)
+    accounts.append({"phone": phone})
+    save_accounts(accounts)
+    print(Fore.GREEN + "Account saved.")
+
+
+def check_accounts() -> None:
+    accounts = load_accounts()
+    if not accounts:
+        print("No accounts saved yet.")
+        return
+    api_id, api_hash = credentials()
+    for account in accounts:
+        phone = account["phone"]
+        client = TelegramClient(str(session_path(phone)), api_id, api_hash)
+        try:
+            client.connect()
+            if client.is_user_authorized():
+                me = client.get_me()
+                name = " ".join(x for x in [me.first_name, me.last_name] if x)
+                print(Fore.GREEN + f"[AUTHORIZED] {phone} - {name}")
             else:
-                os.system('rm add.py')
-                os.system('rm manager.py')
-            os.system('curl -l -O https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/add.py')
-            os.system('curl -l -O https://raw.githubusercontent.com/saifalisew1508/Telegram-Members-Adder/main/manager.py')
-            print(f'{lg}[*] Updated to version: {version.text}')
-            input('Press enter to exit...')
-            exit()
-        else:
-            print(f'{lg}[!] Update aborted.')
-            input('Press enter to goto main menu...')
-    else:
-        print(f'{lg}[i] Your Telegram-Members-Adder is already up to date')
-        input('Press enter to goto main menu...')
+                print(Fore.YELLOW + f"[LOGIN REQUIRED] {phone}")
+        except Exception as exc:
+            print(Fore.RED + f"[ERROR] {phone}: {type(exc).__name__}: {exc}")
+        finally:
+            client.disconnect()
 
-def display_all_accounts():
-    accs = []
-    with open('vars.txt', 'rb') as f:
-        while True:
-            try:
-                accs.append(pickle.load(f))
-            except EOFError:
+
+def remove_account() -> None:
+    accounts = load_accounts()
+    if not accounts:
+        print("No accounts saved.")
+        return
+    for index, item in enumerate(accounts, 1):
+        print(f"{index}. {item['phone']}")
+    raw = input("Account number to remove: ").strip()
+    if not raw.isdigit() or not 1 <= int(raw) <= len(accounts):
+        print(Fore.RED + "Invalid selection.")
+        return
+    account = accounts.pop(int(raw) - 1)
+    save_accounts(accounts)
+    if input("Also delete its local session file? [y/N]: ").strip().lower() == "y":
+        path = session_path(account["phone"]).with_suffix(".session")
+        if path.exists():
+            path.unlink()
+    print(Fore.GREEN + "Account removed.")
+
+
+def main() -> None:
+    while True:
+        print("\n=== Telegram Account Manager ===")
+        print("1. Add/login account")
+        print("2. Check saved sessions")
+        print("3. Remove account")
+        print("4. Exit")
+        choice = input("Select: ").strip()
+        try:
+            if choice == "1":
+                add_account()
+            elif choice == "2":
+                check_accounts()
+            elif choice == "3":
+                remove_account()
+            elif choice == "4":
                 break
-    print(f'\n{cy}')
-    print(f'\tList Of Phone Numbers Are')
-    print('==========================================================')
-    for z in accs:
-        print(f'\t{z[0]}')
-    print('==========================================================')
-    input('\nPress enter to goto main menu')
+            else:
+                print(Fore.YELLOW + "Choose 1, 2, 3, or 4.")
+        except (RuntimeError, ValueError) as exc:
+            print(Fore.RED + str(exc))
+        except KeyboardInterrupt:
+            print("\nCancelled.")
+        except Exception as exc:
+            print(Fore.RED + f"Operation failed: {type(exc).__name__}: {exc}")
 
-while True:
-    clr()
-    banner()
-    print(f'{lg}[1] Add new accounts{n}')
-    print(f'{lg}[2] Filter all banned accounts{n}')
-    print(f'{lg}[3] Delete specific accounts{n}')
-    print(f'{lg}[4] Update your Script{n}')
-    print(f'{lg}[5] Display All Accounts{n}')
-    print(f'{lg}[6] Quit{n}')
-    a = int(input('\nEnter your choice: '))
-    if a == 1:
-        add_new_accounts()
-    elif a == 2:
-        filter_banned_accounts()
-    elif a == 3:
-        delete_specific_account()
-    elif a == 4:
-        update_script()
-    elif a == 5:
-        display_all_accounts()
-    elif a == 6:
-        clr()
-        banner()
-        exit()
+
+if __name__ == "__main__":
+    main()
