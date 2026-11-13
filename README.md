@@ -1,30 +1,25 @@
-# Telegram Group Invitation Tool
+# Telegram Group Manager
 
-A small Telethon-based command-line utility for managing your own Telegram sessions and creating invitation links for groups/channels you administer.
+A command-line Telegram group utility built with Telethon. It supports account/session management and a menu-driven group workflow.
 
 ## Requirements
-
 - Python 3.10+
-- A Telegram API ID and API hash from https://my.telegram.org
-- Permission to create invite links in the destination group/channel
+- Telegram API ID and API hash from https://my.telegram.org
+- Admin permissions for group announcements, moderation, or invite-link creation as applicable
 
 ## Installation
-
 ```bash
 git clone https://github.com/saifalisew1508/Telegram-Members-Adder.git
 cd Telegram-Members-Adder
 python -m venv .venv
-# Linux/macOS:
-source .venv/bin/activate
-# Windows:
-# .venv\\Scripts\\activate
+# Linux/macOS: source .venv/bin/activate
+# Windows: .venv\\Scripts\\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-## Configure API credentials
-
-Set these environment variables before running either script. Do not commit API credentials or session files.
+## Configure credentials
+Set `TELEGRAM_API_ID` and `TELEGRAM_API_HASH` in your terminal environment. Do not commit them.
 
 Linux/macOS:
 ```bash
@@ -38,32 +33,26 @@ $env:TELEGRAM_API_ID="YOUR_API_ID"
 $env:TELEGRAM_API_HASH="YOUR_API_HASH"
 ```
 
-## Account manager
+## 1. Account manager
+Run `python manager.py` to add/login accounts, check saved sessions, or remove an account. Account metadata is stored in `accounts.json`; Telethon sessions are stored in `sessions/`.
 
-```bash
-python manager.py
-```
+## 2. Group manager
+Run `python run.py` to open the interactive menu:
 
-Use the menu to log in to an account, check saved sessions, or remove an account. Account phone numbers are stored in `accounts.json`; Telethon session files are stored in `sessions/`.
+1. **Send a group announcement** - sends one message into the selected group/channel (for example, a family-group good morning message). It does not DM every member.
+2. **Ban one member** - enter one username or user ID. Requires the logged-in account to have appropriate admin rights and asks for explicit confirmation.
+3. **Unban one member** - enter one username or user ID and confirm.
+4. **Export administrators** - saves the group/channel administrator roster to `users.json`, including user ID and username when available. It does not scrape the entire membership.
+5. **Create an invitation link** - creates a link that people can use to join voluntarily. The account needs invite-link permission.
 
-## Create a group invitation link
-
-```bash
-python add.py
-```
-
-Choose an authorized account and enter the group/channel username or link. The account must have permission to create invite links. Share the generated link with people who want to join.
-
-## Privacy and safety
-
-- Never share your `sessions/` directory, `accounts.json`, API hash, login codes, or 2FA password.
-- Session files grant access to Telegram accounts. Keep them private and back them up securely.
-- This project intentionally uses invitation links instead of scraping members, unsolicited bulk adding, or mass-DM automation. Respect Telegram's Terms and each group's privacy settings.
-- The old `vars.txt` pickle format is no longer used. Add accounts again with `manager.py`; do not load untrusted pickle files.
+## Data and security
+- Keep `sessions/`, `accounts.json`, `users.json`, API credentials, login codes, and 2FA passwords private.
+- `users.json` is local data and is excluded from Git.
+- The old `vars.txt` pickle format is not loaded. Register accounts again using `manager.py`.
+- Use moderation only when justified and authorized. This project deliberately does not provide mass bans/unbans, member scraping, unsolicited mass-DMs, or automatic bulk member additions.
+- Respect Telegram's Terms, user privacy, and group rules.
 
 ## Troubleshooting
-
-- `Set TELEGRAM_API_ID...`: configure both environment variables in the same terminal session.
-- `LOGIN REQUIRED`: use the account manager to log in again.
-- Invite-link permission errors: ask a group administrator to grant permission to create invite links.
-- For dependency issues, recreate the virtual environment and run `pip install -r requirements.txt`.
+- Missing API credentials: set both environment variables in the same terminal session.
+- Login required: run `python manager.py` and log in again.
+- Permission errors: ask a group administrator to grant the required rights.
