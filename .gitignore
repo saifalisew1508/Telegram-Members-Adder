@@ -1,0 +1,12 @@
+# Local credentials and account data
+accounts.json
+vars.txt
+status.dat
+sessions/
+*.session
+*.session-journal
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
