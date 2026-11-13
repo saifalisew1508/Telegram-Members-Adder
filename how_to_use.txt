@@ -1,16 +1,28 @@
-Telegram Group Invitation Tool - Quick Guide
+TELEGRAM GROUP MANAGER - QUICK GUIDE
 
-1. Install Python 3.10 or newer.
+INSTALL
+1. Install Python 3.10+.
 2. Run: pip install -r requirements.txt
-3. Obtain TELEGRAM_API_ID and TELEGRAM_API_HASH from https://my.telegram.org.
-4. Set both values as environment variables in the terminal.
-5. Run: python manager.py
-6. Choose "Add/login account" and complete Telegram's login verification.
-7. Run: python add.py
-8. Select an account and enter a group/channel where that account can create invite links.
-9. Share the generated invitation link only with people who want to join.
+3. Get TELEGRAM_API_ID and TELEGRAM_API_HASH from https://my.telegram.org.
+4. Set both values as environment variables in your terminal.
 
-Security:
-- Keep sessions/, accounts.json, API credentials, login codes, and 2FA passwords private.
-- The old vars.txt pickle storage is not used by this version. Add accounts again through manager.py.
-- This version does not scrape members, automatically add users, or send unsolicited bulk messages.
+LOGIN
+Run: python manager.py
+Choose Add/login account and complete Telegram verification.
+
+GROUP MENU
+Run: python run.py
+
+1. Send one announcement to the selected group/channel (for example, a family good-morning message).
+2. Ban one selected member by username or ID, with confirmation.
+3. Unban one selected member by username or ID, with confirmation.
+4. Export group administrators (ID and available username) to users.json.
+5. Create an invitation link for people who choose to join.
+6. Exit.
+
+NOTES
+- You need suitable admin permissions for group actions.
+- Option 1 posts once in the group; it does not send private messages to all members.
+- The export is limited to administrators, not the complete member list.
+- Keep sessions/, accounts.json, users.json, API credentials, login codes and 2FA passwords private.
+- This version does not mass-ban/unban, scrape all members, send unsolicited mass-DMs, or automatically add users.
